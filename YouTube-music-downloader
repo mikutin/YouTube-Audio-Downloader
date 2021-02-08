@@ -1,0 +1,6 @@
+#!/bin/bash
+read -p 'URL of the video: ' urlvar
+read -p 'Give a name to the file you are going to download: ' namevar
+youtube-dl -o 'YourMusic' -f 251 $urlvar
+ffmpeg -i YourMusic $namevar.mp3
+rm YourMusic
